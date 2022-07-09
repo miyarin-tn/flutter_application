@@ -26,4 +26,7 @@ class Dimensions {
   static double pageView = screenHeight / 2.38;
   static double pageViewContainer = screenHeight / 3.45;
   static double pageViewTextContainer = screenHeight / 6.33;
+
+  static double listViewImgSize = screenWidth / 3.28;
+  static double listViewTxtSize = screenWidth / 3.93;
 }

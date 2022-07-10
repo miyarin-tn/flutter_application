@@ -4,6 +4,7 @@ import 'package:flutter_application/widgets/app_column.dart';
 import 'package:flutter_application/widgets/app_icon.dart';
 import 'package:flutter_application/utils/dimensions.dart';
 import 'package:flutter_application/widgets/big_text.dart';
+import 'package:flutter_application/widgets/expandable_text.dart';
 
 class PopularFoodDetail extends StatelessWidget {
   const PopularFoodDetail({Key? key}) : super(key: key);
@@ -64,6 +65,14 @@ class PopularFoodDetail extends StatelessWidget {
                   const AppColumn(text: 'Chinese Side'),
                   SizedBox(height: Dimensions.height20),
                   BigText(text: 'Introduce'),
+                  SizedBox(height: Dimensions.height20),
+                  const Expanded(
+                    child: SingleChildScrollView(
+                      child: ExpandableText(
+                          text:
+                              'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'),
+                    ),
+                  ),
                 ],
               ),
             ),

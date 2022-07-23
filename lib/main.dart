@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/controllers/popular_product_controller.dart';
+import 'package:flutter_application/controllers/recommended_product_controller.dart';
+import 'package:flutter_application/pages/home/main_food_page.dart';
 import 'package:get/get.dart';
-// import 'package:flutter_application/pages/home/main_food_page.dart';
-// import 'package:flutter_application/pages/food/popular_food_detail.dart';
-import 'package:flutter_application/pages/food/recommended_food_detail.dart';
 import 'helper/dependencies.dart' as dep;
 
 Future<void> main() async {
@@ -19,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.find<PopularProductController>().getPopularProductList();
+    Get.find<RecommendedProductController>().getRecommendedProductList();
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const RecommendedFoodDetail(),
+      home: const MainFoodPage(),
     );
   }
 }
